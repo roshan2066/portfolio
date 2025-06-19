@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roshan Portfolio</title>
+  <link rel="stylesheet" href="designs.css">
+  <style>
+    :root {
+  --color-bg: linear-gradient(to right, #218d52, #00001a); /* dark fire bg */
+  --color-text: #fefae0;
+  --color-accent: #fbfbfb;   /* fiery red */
+  --color-highlight: #49ff1cc2; /* orange highlight */
+  --color-secondary: #0d6a04;
+  --color-hover: #401a7e;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-btn-bg: #1c91ff;
+  --color-btn-hover: #4de639;
+  --color-footer: #0f8a7f7a;
+  --color-skill-bg: #00063d;
+  --color-skill-hover: #5c4e00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+  overflow-x: ;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(1000px);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .left {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+  font-family: f;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li:hover {
+  background-color: var(--color-hover);
+  color: #fff;
+}
+
+.section {
+  padding: 80px 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  color: #fff;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #ffdab9;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 90%;
+  width: 320px;
+  height: 320px;
+  border-radius:50%;
+  object-fit: cover;
+  box-shadow: 0 10px 40px rgba(5, 163, 255, 0.938);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: solid;
+}
+
+.hero-image img:hover {
+  transform: scale(1.08) rotate(1deg);
+  box-shadow: 0 20px 45px rgba(5, 221, 236, 0.7);
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  border-left: 6px solid var(--color-accent);
+  padding-left: 12px;
+  color: var(--color-highlight);
+}
+
+.skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills li {
+  background: var(--color-skill-bg);
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.skills li:hover {
+  background: var(--color-skill-hover);
+  transform: scale(1.05);
+}
+
+.contact p {
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--color-btn-bg);
+  color: #1a0002;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 25px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--color-btn-hover);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: var(--color-footer);
+  margin-top: 80px;
+  color: #d3a588;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  </style>
+ 
+  
+</head>
+<body>
+  <nav>
+    <div class="left">ROSHAN'S PORTFOLIO</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="section hero reveal">
+    <div class="hero-text">
+      <h1>Hello, I'm Roshan</h1>
+      <p>A passionate web developer with a focus on creating clean and user-friendly experiences. I enjoy turning complex problems into simple, beautiful designs.</p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+    <div class="hero-image">
+      <img src="mypp.jpg" alt="Roshan Photo"> 
+    </div>
+  </section>
+
+  <section id="about" class="section about reveal">
+    <h2 class="section-title">About Me</h2>
+    <p>Hi, I'm Roshan Adhikari from Waling, Nepal. I'm currently studying Y-CENTER at Waling. I'm passionate about religion, physical exercise, and productivity, and I strive to grow every day—both personally and professionally.
+
+ </p>
+  </section>
+
+  <section id="skills" class="section skills reveal">
+    <h2 class="section-title">Skills</h2>
+    <ul>
+      <li>Computer Advance</li>
+      <li>Basic Programming</li>
+      <li>Fronted Basics</li>
+      <li>Communication</li>
+      <li>Problem Solving</li>
+      <li>Time Management</li>
+      <li>Teamwork</li>
+      <li>Critical Thinking</li>
+    </ul>
+    
+
+
+  <section id="contact" class="section contact reveal">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: <a href="mailto:roshanadhikari593@gmail.com">roshanadhikari593@gmail.com</a></p>
+    <p>Location: Bhirkot 1, Syangja, Nepal</p>
+    <p>Contact No: +9779827176603</p>
+    
+  </section>
+  
+
+  <footer>
+    <p>&copy; 2025 Roshan Adhikari. All rights reserved.</p>
+  </footer>
+ <script src="functions.js"></script>
+ 
+</body>
+</html>
